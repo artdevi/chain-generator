@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>ТАФЯ Генератор цепочек</title>
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="input-container">
+                <div class="row-container head-container">
+                    <p class="input-label">Правила:</p>
+                    <div class="row-container">
+                        <button class="test-button" id="test-button-1">Тест 1</button>
+                        <button class="test-button" id="test-button-2">Тест 2</button>
+                        <button class="test-button" id="test-button-3">Тест 3</button>
+                    </div>
+                </div>
+                <textarea class="rules" id="preview" readonly></textarea>
+                <div class="row-container" id="rules-form">
+                    <input type="text" class="grammar-input" id="left-side" placeholder="S" required pattern="[A-Z]+"/>
+                    <h4 class="arrow">  →  </h4>
+                    <input type="text" class="grammar-input" id="right-side" placeholder="abc" required/>
+                </div>
+                <div class="row-container rules-buttons">
+                    <button class="add-btn" id="rule-add-button" type="button">Добавить правило</button>
+                    <button class="clear-btn" id="clear">Очистить</button>
+                </div>
+                <form class="options-input-container row-container" id="options-form" onsubmit="return false">
+                    <div>
+                        <p class="input-label">Начальный символ:</p>
+                        <input type="text" class="option-input" id="start-char" value="S" required pattern="[A-Z]"/>
+                    </div>
+                    <div>
+                        <p class="input-label">Максимальная длина цепочки:</p>
+                        <input type="text" class="option-input" id="max-length" value="10" required pattern="[1-9]\d*" />
+                    </div>
+                </form>
+                <button class="gen-btn" id="generate" type="button">Генерировать</button>
+                <p class="input-label">Результат:</p>
+                <textarea class="output" id="output" readonly></textarea>
+            </div>
+        </div>
+    <script type='text/javascript' src='script.js'></script>
+    </body>
+</html>
